@@ -77,9 +77,9 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
                     <div class="w-64 h-64 rounded-full bg-indigo-100 overflow-hidden shadow-lg">
-                        <div class="w-full h-full bg-primary flex items-center justify-center text-4xl text-white font-bold ">
-                            BI
-                        </div>
+                        <img src="my picture.jpg" 
+                             alt="Blessing Ikyav" 
+                             class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="md:w-2/3 md:pl-12">
@@ -87,7 +87,7 @@
                         I'm a passionate Frontend Developer based in Jos, Plateau State, Nigeria with 2 years of professional experience creating modern web applications.
                     </p>
                     <p class="text-lg mb-6">
-                        I specialize in Html, Css3,Javasript, Bootstrap5, React.js and Tailwind CSS, focusing on building responsive, accessible, and performant user interfaces that deliver exceptional user experiences.
+                        I specialize in Html, Css3, Javasript, Bootstrap5, React.js and Tailwind CSS, focusing on building responsive, accessible, and performant user interfaces that deliver exceptional user experiences.
                     </p>
                     <p class="text-lg">
                         When I'm not coding, you can find me contributing to open-source projects, learning new technologies, or mentoring aspiring developers.
@@ -124,19 +124,19 @@
                 <button id="projects-tab" class="px-6 py-2 bg-primary text-white rounded-l-lg">
                     Projects
                 </button>
-                <button id="github-tab" class="px-6 py-2 bg-gray-200 rounded-r-lg">
+                <button id="github-tab" class="px-6 py-2 bg-gray-200 rounded-r-lg hover:bg-gray-300 transition">
                     GitHub
                 </button>
             </div>
 
-            <div id="projects-content">
+            <div id="projects-content" class="projects-tab-content">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project items will be added by JavaScript -->
                     <div id="projects-container"></div>
                 </div>
             </div>
 
-            <div id="github-content" class="hidden">
+            <div id="github-content" class="hidden projects-tab-content">
                 <div class="bg-gray-100 rounded-lg p-8 text-center">
                     <i class="fab fa-github text-5xl mx-auto mb-4 text-gray-700"></i>
                     <h3 class="text-2xl font-bold mb-4">My GitHub Profile</h3>
@@ -144,6 +144,15 @@
                     <a href="https://github.com/BlessingIkyav" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center justify-center hover:bg-gray-700 transition">
                         Visit My GitHub <i class="fab fa-github ml-2"></i>
                     </a>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold mb-4">Recent Activity</h4>
+                        <div id="github-activity" class="space-y-4 text-left">
+                            <!-- GitHub activity will be loaded here -->
+                            <div class="bg-white p-4 rounded-lg shadow">
+                                <p class="text-gray-500 italic">Loading GitHub activity...</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,10 +182,10 @@
                     <div class="mt-8">
                         <h4 class="text-xl font-bold mb-4">Connect With Me</h4>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/Winie-Moses" target="_blank" class="text-2xl hover:text-indigo-300">
+                            <a href="https://github.com/BlessingIkyav" target="_blank" class="text-2xl hover:text-indigo-300">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/Blessing-ikyav" target="_blank" class="text-2xl hover:text-indigo-300">
+                            <a href="https://www.linkedin.com/in/blessing-ikyav" target="_blank" class="text-2xl hover:text-indigo-300">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                         </div>
@@ -186,11 +195,11 @@
                     <form id="contact-form" class="space-y-6">
                         <div>
                             <label for="name" class="block mb-2">Your Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-indigo-800 border border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300" placeholder="winie" required>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-indigo-800 border border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300" placeholder="Your Name" required>
                         </div>
                         <div>
                             <label for="email" class="block mb-2">Your Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-indigo-800 border border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300" placeholder="winie@example.com" required>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-indigo-800 border border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300" placeholder="your@email.com" required>
                         </div>
                         <div>
                             <label for="message" class="block mb-2">Your Message</label>
@@ -240,21 +249,37 @@
             const projectsContent = document.getElementById('projects-content');
             const githubContent = document.getElementById('github-content');
 
+            function activateTab(tab, content) {
+                // Hide all tab contents
+                document.querySelectorAll('.projects-tab-content').forEach(el => {
+                    el.classList.add('hidden');
+                });
+                
+                // Remove active styles from all tabs
+                document.querySelectorAll('#projects-tab, #github-tab').forEach(el => {
+                    el.classList.remove('bg-primary', 'text-white');
+                    el.classList.add('bg-gray-200');
+                });
+                
+                // Add active styles to selected tab
+                tab.classList.remove('bg-gray-200');
+                tab.classList.add('bg-primary', 'text-white');
+                
+                // Show selected content
+                content.classList.remove('hidden');
+            }
+
             if (projectsTab && githubTab && projectsContent && githubContent) {
+                // Initialize with Projects tab active
+                activateTab(projectsTab, projectsContent);
+                
                 projectsTab.addEventListener('click', function() {
-                    projectsContent.classList.remove('hidden');
-                    githubContent.classList.add('hidden');
-                    this.classList.add('bg-primary', 'text-white');
-                    githubTab.classList.remove('bg-primary', 'text-white');
-                    githubTab.classList.add('bg-gray-200');
+                    activateTab(this, projectsContent);
                 });
 
                 githubTab.addEventListener('click', function() {
-                    projectsContent.classList.add('hidden');
-                    githubContent.classList.remove('hidden');
-                    this.classList.add('bg-primary', 'text-white');
-                    projectsTab.classList.remove('bg-primary', 'text-white');
-                    projectsTab.classList.add('bg-gray-200');
+                    activateTab(this, githubContent);
+                    // You could add code here to fetch GitHub activity if needed
                 });
             }
 
@@ -280,21 +305,24 @@
                     title: 'E-commerce Platform',
                     description: 'A responsive e-commerce website with cart functionality and payment integration.',
                     technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-                    githubLink: 'https://github.com/BlessingIkyav'
+                    githubLink: 'https://github.com/Winie-Moses',
+                    imageUrl: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80'
                 },
                 {
                     id: 2,
                     title: 'Task Management App',
                     description: 'A productivity application for managing daily tasks with drag-and-drop functionality.',
                     technologies: ['React', 'Firebase', 'Redux', 'Tailwind CSS'],
-                    githubLink: 'https://github.com/BlessingIkyav'
+                    githubLink: 'https://github.com/BlessingIkyav',
+                    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
                 },
                 {
                     id: 3,
                     title: 'Weather Dashboard',
                     description: 'Real-time weather application with 5-day forecast and location detection.',
                     technologies: ['React', 'OpenWeather API', 'Geolocation API'],
-                    githubLink: 'https://github.com/BlessingIkyav'
+                    githubLink: 'https://github.com/BlessingIkyav',
+                    imageUrl: 'https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80'
                 }
             ];
 
@@ -321,8 +349,8 @@
                 const projectElement = document.createElement('div');
                 projectElement.className = 'bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition';
                 projectElement.innerHTML = `
-                    <div class="h-48 bg-primary flex items-center justify-center">
-                        <span class="text-white text-xl font-bold">${project.title}</span>
+                    <div class="h-48 bg-primary overflow-hidden">
+                        <img src="${project.imageUrl}" alt="${project.title}" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">${project.title}</h3>
