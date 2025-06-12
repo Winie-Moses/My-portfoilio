@@ -28,129 +28,81 @@
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
-    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-primary">Blessing Ikyav</div>
-                <nav class="hidden md:block">
-                    <ul class="flex space-x-8">
-                        <li><a href="#about" class="hover:text-primary transition">About</a></li>
-                        <li><a href="#skills" class="hover:text-primary transition">Skills</a></li>
-                        <li><a href="#projects" class="hover:text-primary transition">Projects</a></li>
-                        <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
-                    </ul>
-                </nav>
-                <button id="mobile-menu-button" class="md:hidden text-gray-600">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <ul class="space-y-4">
-                    <li><a href="#about" class="block hover:text-primary transition">About</a></li>
-                    <li><a href="#skills" class="block hover:text-primary transition">Skills</a></li>
-                    <li><a href="#projects" class="block hover:text-primary transition">Projects</a></li>
-                    <li><a href="#contact" class="block hover:text-primary transition">Contact</a></li>
-                </ul>
-            </div>
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-primary">Blessing Ikyav</div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#skills" class="hover:text-primary transition">Skills</a>
+                <a href="#projects" class="hover:text-primary transition">Projects</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 hover:text-primary">About</a>
+            <a href="#skills" class="block py-2 hover:text-primary">Skills</a>
+            <a href="#projects" class="block py-2 hover:text-primary">Projects</a>
+            <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-primary text-white py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Blessing Ikyav</h1>
-            <h2 class="text-2xl md:text-3xl mb-8">Frontend Developer</h2>
-            <p class="text-xl max-w-2xl mx-auto">With 2 years of experience building responsive, user-friendly web applications</p>
-            <div class="mt-10">
-                <a href="#contact" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold mr-4 hover:bg-gray-100 transition">Hire Me</a>
-                <a href="#projects" class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition">View Work</a>
-            </div>
+    <section class="bg-primary text-white py-20 text-center">
+        <h1 class="text-5xl font-bold">Blessing Ikyav</h1>
+        <h2 class="text-2xl mt-4">Frontend Developer</h2>
+        <p class="max-w-xl mx-auto mt-6">With 2 years of experience building responsive, user-friendly web applications</p>
+        <div class="mt-10 space-x-4">
+            <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Hire Me</a>
+            <a href="#projects" class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary">View Work</a>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                    <div class="w-64 h-64 rounded-full bg-indigo-100 overflow-hidden shadow-lg">
-                        <img src="my picture.jpg" 
-                             alt="Blessing Ikyav" 
-                             class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="md:w-2/3 md:pl-12">
-                    <p class="text-lg mb-6">
-                        I'm a passionate Frontend Developer based in Jos, Plateau State, Nigeria with 2 years of professional experience creating modern web applications.
-                    </p>
-                    <p class="text-lg mb-6">
-                        I specialize in Html, Css3, Javasript, Bootstrap5, React.js and Tailwind CSS, focusing on building responsive, accessible, and performant user interfaces that deliver exceptional user experiences.
-                    </p>
-                    <p class="text-lg">
-                        When I'm not coding, you can find me contributing to open-source projects, learning new technologies, or mentoring aspiring developers.
-                    </p>
-                    <div class="mt-8 flex space-x-4">
-                        <a href="https://github.com/BlessingIkyav" target="_blank" class="text-2xl text-gray-700 hover:text-primary">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/blessing-ikyav" target="_blank" class="text-2xl text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-8 md:mb-0">
+                <img src="my picture.jpg" alt="Blessing Ikyav" class="w-64 h-64 rounded-full object-cover mx-auto shadow-lg">
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <p class="mb-4 text-lg">I'm a passionate Frontend Developer based in Jos, Plateau State, Nigeria with 2 years of professional experience creating modern web applications.</p>
+                <p class="mb-4 text-lg">I specialize in HTML, CSS3, JavaScript, Bootstrap5, React.js, and Tailwind CSS, focusing on building responsive and performant user interfaces.</p>
+                <p class="text-lg">Beyond coding, I contribute to open-source projects, learn new technologies, and mentor aspiring developers.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="https://github.com/BlessingIkyav" target="_blank" class="text-2xl hover:text-primary"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/blessing-ikyav" target="_blank" class="text-2xl text-blue-600 hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="py-20 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">My Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Skill items will be added by JavaScript -->
-                <div id="skills-container"></div>
-            </div>
+            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
             <div class="flex justify-center mb-8">
-                <button id="projects-tab" class="px-6 py-2 bg-primary text-white rounded-l-lg">
-                    Projects
-                </button>
-                <button id="github-tab" class="px-6 py-2 bg-gray-200 rounded-r-lg hover:bg-gray-300 transition">
-                    GitHub
-                </button>
+                <button id="projects-tab" class="px-6 py-2 bg-primary text-white rounded-l-lg">Projects</button>
+                <button id="github-tab" class="px-6 py-2 bg-gray-200 rounded-r-lg hover:bg-gray-300">GitHub</button>
             </div>
-
             <div id="projects-content" class="projects-tab-content">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project items will be added by JavaScript -->
-                    <div id="projects-container"></div>
-                </div>
+                <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             </div>
-
-            <div id="github-content" class="hidden projects-tab-content">
-                <div class="bg-gray-100 rounded-lg p-8 text-center">
-                    <i class="fab fa-github text-5xl mx-auto mb-4 text-gray-700"></i>
-                    <h3 class="text-2xl font-bold mb-4">My GitHub Profile</h3>
-                    <p class="mb-6">Check out my open-source contributions and personal projects on GitHub.</p>
-                    <a href="https://github.com/BlessingIkyav" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center justify-center hover:bg-gray-700 transition">
-                        Visit My GitHub <i class="fab fa-github ml-2"></i>
-                    </a>
-                    <div class="mt-8">
-                        <h4 class="text-xl font-semibold mb-4">Recent Activity</h4>
-                        <div id="github-activity" class="space-y-4 text-left">
-                            <!-- GitHub activity will be loaded here -->
-                            <div class="bg-white p-4 rounded-lg shadow">
-                                <p class="text-gray-500 italic">Loading GitHub activity...</p>
-                            </div>
+            <div id="github-content" class="hidden projects-tab-content text-center bg-gray-100 p-8 rounded-lg">
+                <i class="fab fa-github text-5xl text-gray-700 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-4">My GitHub Profile</h3>
+                <p class="mb-6">Check out my open-source contributions and personal projects on GitHub.</p>
+                <a href="https://github.com/Winie-Moses" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 inline-flex items-center justify-center">Visit My GitHub <i class="fab fa-github ml-2"></i></a>
+                <div class="mt-8">
+                    <h4 class="text-xl font-semibold mb-4">Recent Activity</h4>
+                    <div id="github-activity" class="space-y-4 text-left">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <p class="text-gray-500 italic">Loading GitHub activity...</p>
                         </div>
                     </div>
                 </div>
@@ -158,266 +110,115 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 bg-primary text-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
             <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope mr-4 text-xl"></i>
-                            <span>blessingsewuese60@gmail.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone mr-4 text-xl"></i>
-                            <span>09050716891</span>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt mr-4 mt-1 text-xl"></i>
-                            <span>Jos, Plateau State, Nigeria</span>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <h4 class="text-xl font-bold mb-4">Connect With Me</h4>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/BlessingIkyav" target="_blank" class="text-2xl hover:text-indigo-300">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/blessing-ikyav" target="_blank" class="text-2xl hover:text-indigo-300">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
+                <div class="md:w-1/2 space-y-4">
+                    <div><i class="fas fa-envelope mr-2"></i> blessingsewuese60@gmail.com</div>
+                    <div><i class="fas fa-phone mr-2"></i> 09050716891</div>
+                    <div><i class="fas fa-map-marker-alt mr-2"></i> Jos, Plateau State, Nigeria</div>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://github.com/BlessingIkyav" class="text-2xl hover:text-indigo-300"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/blessing-ikyav" class="text-2xl hover:text-indigo-300"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="md:w-1/2 md:pl-12">
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label for="name" class="block mb-2">Your Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-indigo-800 border border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300" placeholder="Your Name" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block mb-2">Your Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-indigo-800 border border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300" placeholder="your@email.com" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block mb-2">Your Message</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-2 rounded-lg bg-indigo-800 border border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300" placeholder="Hello Blessing, I'd like to talk about..." required></textarea>
-                        </div>
-                        <button type="submit" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-indigo-100 transition">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                <form id="contact-form" class="md:w-1/2 md:pl-12 space-y-6 mt-8 md:mt-0">
+                    <input type="text" placeholder="Your Name" required class="w-full px-4 py-2 rounded bg-indigo-800 border border-indigo-600 text-white placeholder-indigo-300">
+                    <input type="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded bg-indigo-800 border border-indigo-600 text-white placeholder-indigo-300">
+                    <textarea rows="5" placeholder="Your Message" required class="w-full px-4 py-2 rounded bg-indigo-800 border border-indigo-600 text-white placeholder-indigo-300"></textarea>
+                    <button type="submit" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-indigo-100">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; <span id="current-year"></span> Blessing Ikyav. All rights reserved.</p>
-            <p class="mt-2 text-gray-400">Frontend Developer </p>
-        </div>
+    <footer class="bg-gray-900 text-white py-6 text-center">
+        <p>&copy; <span id="current-year"></span> Blessing Ikyav. All rights reserved.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                    // Change icon from bars to X when menu is open
-                    const icon = this.querySelector('i');
-                    if (mobileMenu.classList.contains('hidden')) {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    } else {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    }
-                });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const skills = [
+            { name: 'HTML5', level: 95 },
+            { name: 'CSS3/Tailwind', level: 90 },
+            { name: 'JavaScript', level: 85 },
+            { name: 'React.js', level: 85 },
+            { name: 'Git/GitHub', level: 80 },
+            { name: 'Responsive Design', level: 95 },
+            { name: 'UI/UX Principles', level: 75 },
+            { name: 'REST APIs', level: 80 }
+        ];
+
+        const skillsContainer = document.getElementById('skills-container');
+        skills.forEach(skill => {
+            const div = document.createElement('div');
+            div.className = 'bg-white p-6 rounded shadow';
+            div.innerHTML = `
+                <div class="flex justify-between mb-2 font-semibold">
+                    <span>${skill.name}</span>
+                    <span>${skill.level}%</span>
+                </div>
+                <div class="bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-primary h-2.5 rounded-full skill-bar" style="width: ${skill.level}%"></div>
+                </div>
+            `;
+            skillsContainer.appendChild(div);
+        });
+
+        const projects = [
+            {
+                title: 'E-commerce Platform',
+                description: 'A responsive e-commerce site with cart and payment functionality.',
+                technologies: ['React', 'Node.js', 'MongoDB'],
+                githubLink: 'https://github.com/Winie-Moses',
+                imageUrl: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=880&q=80'
+            },
+            {
+                title: 'Task Management App',
+                description: 'A productivity app with task tracking and drag-and-drop.',
+                technologies: ['React', 'Firebase', 'Tailwind'],
+                githubLink: 'https://github.com/BlessingIkyav',
+                imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1470&q=80'
+            },
+            {
+                title: 'Weather Dashboard',
+                description: 'Real-time weather forecast app using OpenWeather API.',
+                technologies: ['React', 'API', 'Geolocation'],
+                githubLink: 'https://github.com/BlessingIkyav',
+                imageUrl: 'https://images.unsplash.com/photo-1601134467661-3d775b999c8b?auto=format&fit=crop&w=1375&q=80'
             }
+        ];
 
-            // Projects/GitHub tabs
-            const projectsTab = document.getElementById('projects-tab');
-            const githubTab = document.getElementById('github-tab');
-            const projectsContent = document.getElementById('projects-content');
-            const githubContent = document.getElementById('github-content');
+        const projectsContainer = document.getElementById('projects-container');
+        projects.forEach(project => {
+            const div = document.createElement('div');
+            div.className = 'bg-white rounded-lg shadow overflow-hidden';
+            div.innerHTML = `
+                <img src="${project.imageUrl}" alt="${project.title}" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                    <p class="mb-2">${project.description}</p>
+                    <div class="text-sm text-gray-500 mb-2">${project.technologies.join(', ')}</div>
+                    <a href="${project.githubLink}" target="_blank" class="text-primary font-semibold">View on GitHub</a>
+                </div>
+            `;
+            projectsContainer.appendChild(div);
+        });
 
-            function activateTab(tab, content) {
-                // Hide all tab contents
-                document.querySelectorAll('.projects-tab-content').forEach(el => {
-                    el.classList.add('hidden');
-                });
-                
-                // Remove active styles from all tabs
-                document.querySelectorAll('#projects-tab, #github-tab').forEach(el => {
-                    el.classList.remove('bg-primary', 'text-white');
-                    el.classList.add('bg-gray-200');
-                });
-                
-                // Add active styles to selected tab
-                tab.classList.remove('bg-gray-200');
-                tab.classList.add('bg-primary', 'text-white');
-                
-                // Show selected content
-                content.classList.remove('hidden');
-            }
-
-            if (projectsTab && githubTab && projectsContent && githubContent) {
-                // Initialize with Projects tab active
-                activateTab(projectsTab, projectsContent);
-                
-                projectsTab.addEventListener('click', function() {
-                    activateTab(this, projectsContent);
-                });
-
-                githubTab.addEventListener('click', function() {
-                    activateTab(this, githubContent);
-                    // You could add code here to fetch GitHub activity if needed
-                });
-            }
-
-            // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // Skills data
-            const skills = [
-                { name: 'HTML5', level: 95 },
-                { name: 'CSS3/Tailwind', level: 90 },
-                { name: 'JavaScript', level: 85 },
-                { name: 'React.js', level: 85 },
-                { name: 'Git/GitHub', level: 80 },
-                { name: 'Responsive Design', level: 95 },
-                { name: 'UI/UX Principles', level: 75 },
-                { name: 'REST APIs', level: 80 }
-            ];
-
-            // Projects data
-            const projects = [
-                {
-                    id: 1,
-                    title: 'E-commerce Platform',
-                    description: 'A responsive e-commerce website with cart functionality and payment integration.',
-                    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-                    githubLink: 'https://github.com/Winie-Moses',
-                    imageUrl: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80'
-                },
-                {
-                    id: 2,
-                    title: 'Task Management App',
-                    description: 'A productivity application for managing daily tasks with drag-and-drop functionality.',
-                    technologies: ['React', 'Firebase', 'Redux', 'Tailwind CSS'],
-                    githubLink: 'https://github.com/BlessingIkyav',
-                    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
-                },
-                {
-                    id: 3,
-                    title: 'Weather Dashboard',
-                    description: 'Real-time weather application with 5-day forecast and location detection.',
-                    technologies: ['React', 'OpenWeather API', 'Geolocation API'],
-                    githubLink: 'https://github.com/BlessingIkyav',
-                    imageUrl: 'https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80'
-                }
-            ];
-
-            // Render skills
-            const skillsContainer = document.getElementById('skills-container');
-            skills.forEach(skill => {
-                const skillElement = document.createElement('div');
-                skillElement.className = 'bg-white p-6 rounded-lg shadow';
-                skillElement.innerHTML = `
-                    <div class="flex justify-between mb-2">
-                        <span class="font-semibold">${skill.name}</span>
-                        <span>${skill.level}%</span>
-                    </div>
-                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                        <div class="bg-primary h-2.5 rounded-full skill-bar" style="width: 0" data-width="${skill.level}%"></div>
-                    </div>
-                `;
-                skillsContainer.appendChild(skillElement);
-            });
-
-            // Render projects
-            const projectsContainer = document.getElementById('projects-container');
-            projects.forEach(project => {
-                const projectElement = document.createElement('div');
-                projectElement.className = 'bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition';
-                projectElement.innerHTML = `
-                    <div class="h-48 bg-primary overflow-hidden">
-                        <img src="${project.imageUrl}" alt="${project.title}" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">${project.title}</h3>
-                        <p class="text-gray-600 mb-4">${project.description}</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            ${project.technologies.map(tech => 
-                                <span class="bg-indigo-100 text-primary text-xs px-3 py-1 rounded-full">${tech}</span>
-                            ).join('')}
-                        </div>
-                        <a href="${project.githubLink}" target="_blank" class="text-primary hover:text-indigo-800 font-semibold inline-flex items-center">
-                            View on GitHub <i class="fab fa-github ml-2"></i>
-                        </a>
-                    </div>
-                `;
-                projectsContainer.appendChild(projectElement);
-            });
-
-            // Animate skill bars when section is visible
-            const animateSkillBars = () => {
-                const skillBars = document.querySelectorAll('.skill-bar');
-                skillBars.forEach(bar => {
-                    const width = bar.getAttribute('data-width');
-                    bar.style.width = width;
-                });
-            };
-
-            const skillsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateSkillBars();
-                        skillsObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            const skillsSection = document.getElementById('skills');
-            if (skillsSection) {
-                skillsObserver.observe(skillsSection);
-            }
-
-            // Contact form submission
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const message = document.getElementById('message').value;
-                    
-                    // Here you would typically send the form data to a server
-                    console.log('Form submitted:', { name, email, message });
-                    
-                    alert('Thank you for your message! I will get back to you soon.');
-                    this.reset();
-                });
-            }
-
-            // Close mobile menu when clicking on a link
-            const mobileLinks = document.querySelectorAll('#mobile-menu a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                });
-            });
+        document.getElementById('projects-tab').addEventListener('click', () => {
+            document.getElementById('projects-content').classList.remove('hidden');
+            document.getElementById('github-content').classList.add('hidden');
+        });
+        document.getElementById('github-tab').addEventListener('click', () => {
+            document.getElementById('projects-content').classList.add('hidden');
+            document.getElementById('github-content').classList.remove('hidden');
         });
     </script>
 </body>
